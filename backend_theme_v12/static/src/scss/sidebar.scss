@@ -1,0 +1,94 @@
+/* Copyright 2016, 2018 Openworx.
+ * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
+
+/* App Sidebar Panel */
+
+$odoo-sidebar-width: 180px;
+
+.app-sidebar-panel {
+	flex: 0 0 $odoo-sidebar-width;	
+    background-color: $gray-base;
+    height: 100% !important;
+    overflow-y: auto;
+    @media (max-width: 768px) {
+      display: none;
+    }
+}
+
+/* @media (min-width: 768px) {
+	.o_menu_apps {
+		display: none !important;
+	}
+} */
+
+//.app-sidebar-panel:hover {
+//    @include o-flex(0, 0, $odoo-sidebar-width);
+//}
+
+.app-sidebar {
+    white-space: nowrap;
+    padding: 0;
+    .app-sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    >li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0px;
+        >a {
+            display: block;
+            position: relative;
+            margin: 0;
+            border: 0px;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 300;
+            color: $gray-lighter;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+        > li:hover > a{
+	    background: darken(#0099ff, 15%);
+	    color: #fff;
+        }
+    }
+}
+
+.app-sidebar-menuitem {
+    width: 23px;
+    height: 22px;
+    margin-right: 5px;
+}
+
+.toggle-sidebar {
+    margin-left: 0px - $odoo-sidebar-width;
+}
+.o_input,input[type="text"], input[type="password"], input[type="number"], textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags, .o_searchview{
+border:1px solid black;
+border-radius:3px;
+}
+.btn-primary{
+background:#f1682a!important;
+border:1px solid #f1682a!important;
+}
+
+#app-sidebar.app-sidebar-panel{display:none!important;flex:0!important;}
+.o_web_client input:focus, .o_web_client textarea:focus, .o_web_client select:focus {
+    border: 1px solid #ef672a;
+}
+.o_main_navbar {
+    background-color: #b6b6b6;
+}
+a {
+    color: #666666;
+    transition: 0.6s ease;
+}
+a:hover{
+color:#f1682a;
+}
+.o_required_modifier.o_input, .o_required_modifier .o_input{background-color: transparent !important;}
+.o_field_invalid.o_input, .o_field_invalid .o_input, .o_field_invalid.o_form_label{color:white!important;border:white!important;}
